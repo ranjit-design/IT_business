@@ -1,21 +1,6 @@
-import { type User, type InsertUser, type ContactSubmission, type InsertContact, type Service, type Project, type Testimonial, type TeamMember, type TimelineEvent } from "@shared/schema";
-import { randomUUID } from "crypto";
+import type { Service, Project, Testimonial, TeamMember, TimelineEvent } from "@shared/schema";
 
-export interface IStorage {
-  getUser(id: string): Promise<User | undefined>;
-  getUserByUsername(username: string): Promise<User | undefined>;
-  createUser(user: InsertUser): Promise<User>;
-  createContactSubmission(data: InsertContact): Promise<ContactSubmission>;
-  getContactSubmissions(): Promise<ContactSubmission[]>;
-  getServices(): Promise<Service[]>;
-  getProjects(): Promise<Project[]>;
-  getProject(id: string): Promise<Project | undefined>;
-  getTestimonials(): Promise<Testimonial[]>;
-  getTeamMembers(): Promise<TeamMember[]>;
-  getTimeline(): Promise<TimelineEvent[]>;
-}
-
-const services: Service[] = [
+export const services: Service[] = [
   {
     id: "web-development",
     title: "Web Development",
@@ -96,7 +81,7 @@ const services: Service[] = [
   }
 ];
 
-const projects: Project[] = [
+export const projects: Project[] = [
   {
     id: "fintech-dashboard",
     title: "FinTech Dashboard",
@@ -108,7 +93,11 @@ const projects: Project[] = [
     technologies: ["React", "TypeScript", "D3.js", "Node.js", "PostgreSQL"],
     challenge: "Create a real-time dashboard that processes millions of data points while maintaining sub-second response times.",
     solution: "Implemented WebSocket connections with intelligent data aggregation and caching strategies, combined with optimized chart rendering.",
-    results: ["40% faster data processing", "99.9% uptime achieved", "50K+ daily active users"]
+    results: [
+      "40% faster data processing",
+      "99.9% uptime achieved",
+      "50K+ daily active users"
+    ]
   },
   {
     id: "ecommerce-platform",
@@ -121,7 +110,11 @@ const projects: Project[] = [
     technologies: ["Next.js", "Shopify", "Tailwind CSS", "Stripe", "Algolia"],
     challenge: "Build an e-commerce platform that reflects the brand's luxury positioning while maximizing conversion rates.",
     solution: "Designed immersive product pages with 360-degree views, AR try-on features, and a seamless checkout experience.",
-    results: ["85% increase in conversions", "3x average order value", "45% reduction in cart abandonment"]
+    results: [
+      "85% increase in conversions",
+      "3x average order value",
+      "45% reduction in cart abandonment"
+    ]
   },
   {
     id: "healthcare-app",
@@ -134,7 +127,11 @@ const projects: Project[] = [
     technologies: ["React Native", "WebRTC", "AWS", "Node.js", "MongoDB"],
     challenge: "Develop a secure, reliable video consultation platform that works across various network conditions.",
     solution: "Built adaptive video streaming with automatic quality adjustment and end-to-end encryption for all communications.",
-    results: ["100K+ consultations completed", "4.8 star app rating", "30% reduction in no-shows"]
+    results: [
+      "100K+ consultations completed",
+      "4.8 star app rating",
+      "30% reduction in no-shows"
+    ]
   },
   {
     id: "saas-platform",
@@ -147,7 +144,11 @@ const projects: Project[] = [
     technologies: ["Vue.js", "Python", "FastAPI", "Redis", "Elasticsearch"],
     challenge: "Create a scalable project management solution that handles enterprise-level workloads with real-time collaboration.",
     solution: "Implemented event-driven architecture with CQRS pattern, enabling real-time updates across thousands of concurrent users.",
-    results: ["500+ enterprise clients", "2M+ tasks managed monthly", "35% productivity increase"]
+    results: [
+      "500+ enterprise clients",
+      "2M+ tasks managed monthly",
+      "35% productivity increase"
+    ]
   },
   {
     id: "brand-redesign",
@@ -160,7 +161,11 @@ const projects: Project[] = [
     technologies: ["Figma", "Adobe CC", "Brand Strategy", "Market Research"],
     challenge: "Reposition a B2B tech company as an innovative leader in their industry while maintaining existing client relationships.",
     solution: "Developed a sophisticated brand identity with a bold color palette, modern typography, and compelling brand narrative.",
-    results: ["200% increase in brand awareness", "60% more qualified leads", "Featured in 5 industry publications"]
+    results: [
+      "200% increase in brand awareness",
+      "60% more qualified leads",
+      "Featured in 5 industry publications"
+    ]
   },
   {
     id: "ai-platform",
@@ -173,11 +178,15 @@ const projects: Project[] = [
     technologies: ["Python", "TensorFlow", "OpenAI", "FastAPI", "PostgreSQL"],
     challenge: "Build an AI system that can handle complex customer queries while maintaining high accuracy and human-like responses.",
     solution: "Developed a hybrid AI system combining fine-tuned LLMs with retrieval-augmented generation for accurate, contextual responses.",
-    results: ["80% automation rate", "95% customer satisfaction", "60% cost reduction"]
+    results: [
+      "80% automation rate",
+      "95% customer satisfaction",
+      "60% cost reduction"
+    ]
   }
 ];
 
-const testimonials: Testimonial[] = [
+export const testimonials: Testimonial[] = [
   {
     id: "1",
     name: "Sarah Mitchell",
@@ -225,14 +234,17 @@ const testimonials: Testimonial[] = [
   }
 ];
 
-const teamMembers: TeamMember[] = [
+export const teamMembers: TeamMember[] = [
   {
     id: "1",
     name: "Alexandra Sterling",
     role: "CEO & Founder",
     bio: "With 15+ years in digital strategy, Alexandra leads Apex with a vision for innovative, client-focused solutions that drive measurable results.",
     avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
-    social: { linkedin: "#", twitter: "#" }
+    social: {
+      linkedin: "#",
+      twitter: "#"
+    }
   },
   {
     id: "2",
@@ -240,7 +252,10 @@ const teamMembers: TeamMember[] = [
     role: "Technical Director",
     bio: "A full-stack architect with expertise in scalable systems, Marcus ensures every project is built on a foundation of technical excellence.",
     avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
-    social: { linkedin: "#", github: "#" }
+    social: {
+      linkedin: "#",
+      github: "#"
+    }
   },
   {
     id: "3",
@@ -248,7 +263,10 @@ const teamMembers: TeamMember[] = [
     role: "Creative Director",
     bio: "Olivia's award-winning designs have shaped brands across industries. She brings artistry and strategy to every creative challenge.",
     avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop&crop=face",
-    social: { linkedin: "#", twitter: "#" }
+    social: {
+      linkedin: "#",
+      twitter: "#"
+    }
   },
   {
     id: "4",
@@ -256,7 +274,10 @@ const teamMembers: TeamMember[] = [
     role: "Head of Strategy",
     bio: "James combines data-driven insights with creative thinking to develop strategies that position our clients for sustainable growth.",
     avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face",
-    social: { linkedin: "#", twitter: "#" }
+    social: {
+      linkedin: "#",
+      twitter: "#"
+    }
   },
   {
     id: "5",
@@ -264,7 +285,9 @@ const teamMembers: TeamMember[] = [
     role: "UX Lead",
     bio: "Sophie crafts user experiences that delight and convert. Her human-centered approach ensures every interaction is intuitive and meaningful.",
     avatar: "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=400&h=400&fit=crop&crop=face",
-    social: { linkedin: "#" }
+    social: {
+      linkedin: "#"
+    }
   },
   {
     id: "6",
@@ -272,11 +295,14 @@ const teamMembers: TeamMember[] = [
     role: "Development Lead",
     bio: "Ryan leads our development team with a focus on clean code and cutting-edge technologies. He turns complex requirements into elegant solutions.",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-    social: { linkedin: "#", github: "#" }
+    social: {
+      linkedin: "#",
+      github: "#"
+    }
   }
 ];
 
-const timeline: TimelineEvent[] = [
+export const timeline: TimelineEvent[] = [
   {
     id: "1",
     year: "2015",
@@ -314,71 +340,3 @@ const timeline: TimelineEvent[] = [
     description: "Launched our AI Innovation Lab, pioneering next-generation solutions for our clients."
   }
 ];
-
-export class MemStorage implements IStorage {
-  private users: Map<string, User>;
-  private contactSubmissions: Map<string, ContactSubmission>;
-
-  constructor() {
-    this.users = new Map();
-    this.contactSubmissions = new Map();
-  }
-
-  async getUser(id: string): Promise<User | undefined> {
-    return this.users.get(id);
-  }
-
-  async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
-  }
-
-  async createUser(insertUser: InsertUser): Promise<User> {
-    const id = randomUUID();
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
-    return user;
-  }
-
-  async createContactSubmission(data: InsertContact): Promise<ContactSubmission> {
-    const id = randomUUID();
-    const submission: ContactSubmission = {
-      ...data,
-      id,
-      createdAt: new Date(),
-    };
-    this.contactSubmissions.set(id, submission);
-    return submission;
-  }
-
-  async getContactSubmissions(): Promise<ContactSubmission[]> {
-    return Array.from(this.contactSubmissions.values());
-  }
-
-  async getServices(): Promise<Service[]> {
-    return services;
-  }
-
-  async getProjects(): Promise<Project[]> {
-    return projects;
-  }
-
-  async getProject(id: string): Promise<Project | undefined> {
-    return projects.find((p) => p.id === id);
-  }
-
-  async getTestimonials(): Promise<Testimonial[]> {
-    return testimonials;
-  }
-
-  async getTeamMembers(): Promise<TeamMember[]> {
-    return teamMembers;
-  }
-
-  async getTimeline(): Promise<TimelineEvent[]> {
-    return timeline;
-  }
-}
-
-export const storage = new MemStorage();
