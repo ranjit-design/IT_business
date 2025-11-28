@@ -1,0 +1,76 @@
+Build a complete, modern Business Agency Website using the latest version of
+Next.js (App Router), Tailwind CSS, and Framer Motion.  
+The website should look premium, animated, and fully responsive.
+
+Tech Stack:
+- Next.js (App Router)
+- Tailwind CSS
+- Framer Motion
+- TypeScript (optional, but preferred)
+- Reusable Components
+
+Website Pages:
+1. Home (Landing Page)
+   - Hero section with animated headline
+   - Our Services
+   - Why Choose Us
+   - Portfolio / Projects Showcase with hover animations
+   - Testimonials slider
+   - Call-To-Action section
+2. About Page
+   - Company mission & vision
+   - Team section with motion cards
+   - Timeline / Company journey
+3. Services Page
+   - List of all agency services
+   - Animated service cards
+4. Portfolio Page
+   - Grid of projects with hover animations
+   - Full project details page template
+5. Contact Page
+   - Contact form (dummy backend)
+   - Google map embed
+   - Contact info section
+
+Global Requirements:
+- Premium modern UI
+- Smooth scroll-reveal animations using Framer Motion
+- Page transition animations
+- Interactive hover effects
+- Clean folder structure
+- Reusable UI components like Button, Card, Container, SectionWrapper, Navbar, Footer
+- Mobile-friendly animated hamburger menu
+- Dark + Light theme support (optional)
+
+Design Style:
+- Modern business agency theme
+- Professional, minimal, beautiful gradient accents
+- Glassmorphism sections
+- Large typography
+- Smooth animations everywhere
+- Use sample images from Unsplash
+
+Project Structure:
+- /app
+  - /components
+  - /sections
+  - /services
+  - /portfolio
+  - /styles
+  - /hooks
+  - layout.jsx
+  - globals.css
+- /public (images)
+- package.json
+- tailwind.config.js
+
+Deliverables:
+1. Full folder structure
+2. Complete code for all pages inside /app
+3. All components (Navbar, Footer, Hero, Services, Portfolio, Testimonials, CTA, etc.)
+4. Framer Motion animation utilities (variants)
+5. Example data arrays for services, testimonials, portfolio
+6. SEO metadata for each page
+7. Comments inside code explaining logic
+
+Start by generating the full folder structure and then generate the complete code of each file.
