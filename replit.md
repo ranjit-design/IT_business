@@ -1,8 +1,8 @@
-# Apex Agency - Business Agency Website
+# Ranjit Agency - Business Agency Website
 
 ## Overview
 
-Apex Agency is a modern, premium business agency website built to showcase digital services, portfolio projects, and company information. The application features a sophisticated design with smooth animations, responsive layouts, and a focus on visual impact. Built with React, TypeScript, Express, and PostgreSQL (via Drizzle ORM), it provides both a compelling frontend experience and a functional backend for contact form submissions and content management.
+Ranjit Agency is a modern, premium business agency website built to showcase digital services, portfolio projects, and company information. The application features a sophisticated design with smooth animations, responsive layouts, and a focus on visual impact. Built with React, TypeScript, Express, and PostgreSQL (via Drizzle ORM), it provides both a compelling frontend experience and a functional backend for contact form submissions and content management.
 
 ## User Preferences
 

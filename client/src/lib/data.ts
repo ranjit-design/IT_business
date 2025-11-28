@@ -4,7 +4,7 @@ export const services: Service[] = [
   {
     id: "web-development",
     title: "Web Development",
-    description: "Custom web applications built with cutting-edge technologies. From responsive websites to complex web platforms, we deliver solutions that drive results.",
+    description: "Custom web applications built with cutting-edge technologies. From responsive websites to complex web platforms that drive results.",
     icon: "Code2",
     features: [
       "Custom Web Applications",
@@ -87,9 +87,9 @@ export const projects: Project[] = [
     title: "FinTech Dashboard",
     category: "Web Development",
     description: "A comprehensive financial analytics platform with real-time data visualization and AI-powered insights for investment professionals.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=800&h=600&fit=crop",
     client: "WealthStream Capital",
-    year: "2024",
+    year: "2025",
     technologies: ["React", "TypeScript", "D3.js", "Node.js", "PostgreSQL"],
     challenge: "Create a real-time dashboard that processes millions of data points while maintaining sub-second response times.",
     solution: "Implemented WebSocket connections with intelligent data aggregation and caching strategies, combined with optimized chart rendering.",
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     description: "Premium e-commerce experience for a luxury fashion brand, featuring immersive product displays and personalized shopping journeys.",
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
     client: "Maison Elegante",
-    year: "2024",
+    year: "2025",
     technologies: ["Next.js", "Shopify", "Tailwind CSS", "Stripe", "Algolia"],
     challenge: "Build an e-commerce platform that reflects the brand's luxury positioning while maximizing conversion rates.",
     solution: "Designed immersive product pages with 360-degree views, AR try-on features, and a seamless checkout experience.",
@@ -157,7 +157,7 @@ export const projects: Project[] = [
     description: "Complete brand transformation for a tech startup, including visual identity, messaging framework, and go-to-market strategy.",
     image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&h=600&fit=crop",
     client: "Nexus Technologies",
-    year: "2024",
+    year: "2025",
     technologies: ["Figma", "Adobe CC", "Brand Strategy", "Market Research"],
     challenge: "Reposition a B2B tech company as an innovative leader in their industry while maintaining existing client relationships.",
     solution: "Developed a sophisticated brand identity with a bold color palette, modern typography, and compelling brand narrative.",
@@ -174,7 +174,7 @@ export const projects: Project[] = [
     description: "Machine learning platform that automates customer support with natural language processing and sentiment analysis.",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
     client: "SupportTech Inc",
-    year: "2024",
+    year: "2025",
     technologies: ["Python", "TensorFlow", "OpenAI", "FastAPI", "PostgreSQL"],
     challenge: "Build an AI system that can handle complex customer queries while maintaining high accuracy and human-like responses.",
     solution: "Developed a hybrid AI system combining fine-tuned LLMs with retrieval-augmented generation for accurate, contextual responses.",
@@ -189,25 +189,25 @@ export const projects: Project[] = [
 export const testimonials: Testimonial[] = [
   {
     id: "1",
-    name: "Sarah Mitchell",
+    name: "Ranjit Chaudhary",
     role: "CEO",
-    company: "TechVentures Inc",
-    content: "Apex Agency transformed our digital presence completely. Their strategic approach and attention to detail exceeded our expectations. The results speak for themselves - our conversions increased by 150% within three months.",
+    company: "XYZ Enterprises",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ranjit and his team transformed our online presence with a stunning website and seamless user experience. Their professionalism and expertise are unmatched.",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
     rating: 5
   },
   {
     id: "2",
-    name: "Michael Chen",
+    name: "Ranjit Chaudhary",
     role: "CTO",
     company: "InnovateTech",
-    content: "Working with Apex was a game-changer for our startup. They delivered a scalable platform that handles our growing user base effortlessly. Their technical expertise and communication are truly world-class.",
+    content: "Working with Ranjit was a game-changer for our startup. They delivered a scalable platform that handles our growing user base effortlessly. Their technical expertise and communication are truly world-class.",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
     rating: 5
   },
   {
     id: "3",
-    name: "Emily Rodriguez",
+    name: "Ranjit Chaudhary",
     role: "Marketing Director",
     company: "Global Brands Co",
     content: "The brand strategy they developed for us was nothing short of brilliant. They understood our vision and translated it into a compelling identity that resonates with our audience. Highly recommended!",
@@ -216,19 +216,19 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "4",
-    name: "David Park",
+    name: "Ranjit Chaudhary",
     role: "Founder",
     company: "NextGen Solutions",
-    content: "From concept to launch, Apex handled everything professionally. Their team's creativity and technical skills are matched only by their dedication to client success. They're now our go-to digital partner.",
+    content: "From concept to launch, Ranjit handled everything professionally. Their team's creativity and technical skills are matched only by their dedication to client success. They're now our go-to digital partner.",
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
     rating: 5
   },
   {
     id: "5",
-    name: "Lisa Thompson",
+    name: "Ranjit Chaudhary",
     role: "VP of Product",
     company: "HealthFirst",
-    content: "Apex delivered our healthcare platform on time and within budget. Their understanding of compliance requirements and user experience made them the perfect partner for our mission-critical project.",
+    content: "Ranjit delivered our healthcare platform on time and within budget. Their understanding of compliance requirements and user experience made them the perfect partner for our mission-critical project.",
     avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face",
     rating: 5
   }
@@ -237,9 +237,9 @@ export const testimonials: Testimonial[] = [
 export const teamMembers: TeamMember[] = [
   {
     id: "1",
-    name: "Alexandra Sterling",
+    name: "Ranjit Chaudhary",
     role: "CEO & Founder",
-    bio: "With 15+ years in digital strategy, Alexandra leads Apex with a vision for innovative, client-focused solutions that drive measurable results.",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ranjit leads with a vision for innovative, client-focused solutions that drive measurable results.",
     avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
     social: {
       linkedin: "#",
@@ -248,9 +248,9 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "2",
-    name: "Marcus Wei",
+    name: "Ranjit Chaudhary",
     role: "Technical Director",
-    bio: "A full-stack architect with expertise in scalable systems, Marcus ensures every project is built on a foundation of technical excellence.",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ranjit ensures every project is built on a foundation of technical excellence.",
     avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
     social: {
       linkedin: "#",
@@ -259,9 +259,9 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "3",
-    name: "Olivia Martinez",
+    name: "Ranjit Chaudhary",
     role: "Creative Director",
-    bio: "Olivia's award-winning designs have shaped brands across industries. She brings artistry and strategy to every creative challenge.",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ranjit brings artistry and strategy to every creative challenge.",
     avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop&crop=face",
     social: {
       linkedin: "#",
@@ -270,9 +270,9 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "4",
-    name: "James Cooper",
+    name: "Ranjit Chaudhary",
     role: "Head of Strategy",
-    bio: "James combines data-driven insights with creative thinking to develop strategies that position our clients for sustainable growth.",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ranjit leads our strategy team in crafting data-driven approaches that deliver impactful results.",
     avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face",
     social: {
       linkedin: "#",
@@ -281,9 +281,9 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "5",
-    name: "Sophie Chen",
+    name: "Ranjit Chaudhary",
     role: "UX Lead",
-    bio: "Sophie crafts user experiences that delight and convert. Her human-centered approach ensures every interaction is intuitive and meaningful.",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ranjit leads our UX team in crafting intuitive, user-centered designs that enhance engagement.",
     avatar: "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=400&h=400&fit=crop&crop=face",
     social: {
       linkedin: "#"
@@ -291,9 +291,9 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "6",
-    name: "Ryan Brooks",
+    name: "Ranjit Chaudhary",
     role: "Development Lead",
-    bio: "Ryan leads our development team with a focus on clean code and cutting-edge technologies. He turns complex requirements into elegant solutions.",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ranjit leads our development team with a focus on clean code and innovative solutions.",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
     social: {
       linkedin: "#",
@@ -306,7 +306,7 @@ export const timeline: TimelineEvent[] = [
   {
     id: "1",
     year: "2015",
-    title: "Founded in San Francisco",
+    title: "Founded in Lalitpur",
     description: "Started as a small team of three passionate designers and developers with a shared vision for exceptional digital experiences."
   },
   {
@@ -335,7 +335,7 @@ export const timeline: TimelineEvent[] = [
   },
   {
     id: "6",
-    year: "2024",
+    year: "2025",
     title: "AI & Innovation Lab",
     description: "Launched our AI Innovation Lab, pioneering next-generation solutions for our clients."
   }

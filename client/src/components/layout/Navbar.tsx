@@ -68,7 +68,7 @@ export function Navbar() {
                   <span className="text-white font-bold text-lg md:text-xl">A</span>
                 </div>
                 <span className="text-xl md:text-2xl font-bold text-foreground">
-                  Apex
+                  Ranjit
                 </span>
               </motion.div>
             </Link>

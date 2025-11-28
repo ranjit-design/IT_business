@@ -104,7 +104,7 @@ const projects: Project[] = [
     description: "A comprehensive financial analytics platform with real-time data visualization and AI-powered insights for investment professionals.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
     client: "WealthStream Capital",
-    year: "2024",
+    year: "2025",
     technologies: ["React", "TypeScript", "D3.js", "Node.js", "PostgreSQL"],
     challenge: "Create a real-time dashboard that processes millions of data points while maintaining sub-second response times.",
     solution: "Implemented WebSocket connections with intelligent data aggregation and caching strategies, combined with optimized chart rendering.",
@@ -117,7 +117,7 @@ const projects: Project[] = [
     description: "Premium e-commerce experience for a luxury fashion brand, featuring immersive product displays and personalized shopping journeys.",
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
     client: "Maison Elegante",
-    year: "2024",
+    year: "2025",
     technologies: ["Next.js", "Shopify", "Tailwind CSS", "Stripe", "Algolia"],
     challenge: "Build an e-commerce platform that reflects the brand's luxury positioning while maximizing conversion rates.",
     solution: "Designed immersive product pages with 360-degree views, AR try-on features, and a seamless checkout experience.",
@@ -156,7 +156,7 @@ const projects: Project[] = [
     description: "Complete brand transformation for a tech startup, including visual identity, messaging framework, and go-to-market strategy.",
     image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&h=600&fit=crop",
     client: "Nexus Technologies",
-    year: "2024",
+    year: "2025",
     technologies: ["Figma", "Adobe CC", "Brand Strategy", "Market Research"],
     challenge: "Reposition a B2B tech company as an innovative leader in their industry while maintaining existing client relationships.",
     solution: "Developed a sophisticated brand identity with a bold color palette, modern typography, and compelling brand narrative.",
@@ -169,7 +169,7 @@ const projects: Project[] = [
     description: "Machine learning platform that automates customer support with natural language processing and sentiment analysis.",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
     client: "SupportTech Inc",
-    year: "2024",
+    year: "2025",
     technologies: ["Python", "TensorFlow", "OpenAI", "FastAPI", "PostgreSQL"],
     challenge: "Build an AI system that can handle complex customer queries while maintaining high accuracy and human-like responses.",
     solution: "Developed a hybrid AI system combining fine-tuned LLMs with retrieval-augmented generation for accurate, contextual responses.",
@@ -183,7 +183,7 @@ const testimonials: Testimonial[] = [
     name: "Sarah Mitchell",
     role: "CEO",
     company: "TechVentures Inc",
-    content: "Apex Agency transformed our digital presence completely. Their strategic approach and attention to detail exceeded our expectations. The results speak for themselves - our conversions increased by 150% within three months.",
+    content: "Ranjit Agency transformed our digital presence completely. Their strategic approach and attention to detail exceeded our expectations. The results speak for themselves - our conversions increased by 150% within three months.",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
     rating: 5
   },
@@ -192,7 +192,7 @@ const testimonials: Testimonial[] = [
     name: "Michael Chen",
     role: "CTO",
     company: "InnovateTech",
-    content: "Working with Apex was a game-changer for our startup. They delivered a scalable platform that handles our growing user base effortlessly. Their technical expertise and communication are truly world-class.",
+    content: "Working with Ranjit was a game-changer for our startup. They delivered a scalable platform that handles our growing user base effortlessly. Their technical expertise and communication are truly world-class.",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
     rating: 5
   },
@@ -210,7 +210,7 @@ const testimonials: Testimonial[] = [
     name: "David Park",
     role: "Founder",
     company: "NextGen Solutions",
-    content: "From concept to launch, Apex handled everything professionally. Their team's creativity and technical skills are matched only by their dedication to client success. They're now our go-to digital partner.",
+    content: "From concept to launch, Ranjit handled everything professionally. Their team's creativity and technical skills are matched only by their dedication to client success. They're now our go-to digital partner.",
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
     rating: 5
   },
@@ -219,7 +219,7 @@ const testimonials: Testimonial[] = [
     name: "Lisa Thompson",
     role: "VP of Product",
     company: "HealthFirst",
-    content: "Apex delivered our healthcare platform on time and within budget. Their understanding of compliance requirements and user experience made them the perfect partner for our mission-critical project.",
+    content: "Ranjit delivered our healthcare platform on time and within budget. Their understanding of compliance requirements and user experience made them the perfect partner for our mission-critical project.",
     avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face",
     rating: 5
   }
@@ -230,7 +230,7 @@ const teamMembers: TeamMember[] = [
     id: "1",
     name: "Alexandra Sterling",
     role: "CEO & Founder",
-    bio: "With 15+ years in digital strategy, Alexandra leads Apex with a vision for innovative, client-focused solutions that drive measurable results.",
+    bio: "With 15+ years in digital strategy, Alexandra leads Ranjit with a vision for innovative, client-focused solutions that drive measurable results.",
     avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
     social: { linkedin: "#", twitter: "#" }
   },
@@ -309,7 +309,7 @@ const timeline: TimelineEvent[] = [
   },
   {
     id: "6",
-    year: "2024",
+    year: "2025",
     title: "AI & Innovation Lab",
     description: "Launched our AI Innovation Lab, pioneering next-generation solutions for our clients."
   }

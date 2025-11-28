@@ -21,10 +21,10 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { href: "#", icon: Linkedin, label: "LinkedIn" },
-  { href: "#", icon: Twitter, label: "Twitter" },
-  { href: "#", icon: Github, label: "GitHub" },
-  { href: "#", icon: Instagram, label: "Instagram" },
+  { href: "https://www.linkedin.com/in/ranjit-chaudhary-043969362/", icon: Linkedin, label: "LinkedIn" },
+  { href: "https://x.com/ChaudharyR66680", icon: Twitter, label: "Twitter" },
+  { href: "https://github.com/ranjit-design", icon: Github, label: "GitHub" },
+  { href: "https://www.instagram.com/ranjit_kanxa/", icon: Instagram, label: "Instagram" },
 ];
 
 export function Footer() {
@@ -45,7 +45,7 @@ export function Footer() {
                   <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center">
                     <span className="text-white font-bold text-xl">A</span>
                   </div>
-                  <span className="text-2xl font-bold text-foreground">Apex</span>
+                  <span className="text-2xl font-bold text-foreground">Ranjit</span>
                 </div>
               </Link>
               <p className="text-muted-foreground text-sm leading-relaxed mb-6">
@@ -111,7 +111,7 @@ export function Footer() {
               <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
                 <Input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder="Email..."
                   className="flex-1"
                   data-testid="input-newsletter-email"
                 />
@@ -121,12 +121,12 @@ export function Footer() {
               </form>
               <div className="mt-6 space-y-3">
                 <a 
-                  href="mailto:hello@apexagency.com" 
+                  href="mailto:ranjitchaudhary057@gmail.com" 
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
                   data-testid="link-email"
                 >
-                  <Mail className="w-4 h-4" />
-                  hello@apexagency.com
+                  <Mail className="w-3 h-3" />
+                    abc@gmail.com
                 </a>
                 <a 
                   href="tel:+1234567890" 
@@ -134,11 +134,11 @@ export function Footer() {
                   data-testid="link-phone"
                 >
                   <Phone className="w-4 h-4" />
-                  +1 (234) 567-890
+                  +977-9744232833
                 </a>
                 <span className="flex items-center gap-2 text-sm text-muted-foreground">
                   <MapPin className="w-4 h-4" />
-                  San Francisco, CA
+                  Kathmandu, NEPAL
                 </span>
               </div>
             </motion.div>
@@ -148,7 +148,7 @@ export function Footer() {
         <div className="py-6 border-t border-border">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Apex Agency. All rights reserved.
+              © {new Date().getFullYear()} Ranjit Agency. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link href="#">

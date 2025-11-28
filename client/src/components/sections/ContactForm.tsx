@@ -6,7 +6,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useMutation } from "@tanstack/react-query";
 import { Container } from "@/components/layout/Container";
-import { SectionWrapper, SectionHeader } from "@/components/layout/SectionWrapper";
+import {
+  SectionWrapper,
+  SectionHeader,
+} from "@/components/layout/SectionWrapper";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -37,25 +40,25 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    value: "hello@apexagency.com",
-    href: "mailto:hello@apexagency.com",
+    value: "abc@gmail.com",
+    href: "mailto:abc@gmail.com",
   },
   {
     icon: Phone,
     title: "Call Us",
-    value: "+1 (234) 567-890",
-    href: "tel:+1234567890",
+    value: "+977-9800000000",
+    href: "+977-9800000000",
   },
   {
     icon: MapPin,
     title: "Visit Us",
-    value: "123 Innovation Drive, San Francisco, CA 94105",
+    value: "Kathmandu, Nepal",
     href: null,
   },
   {
     icon: Clock,
     title: "Office Hours",
-    value: "Mon - Fri: 9:00 AM - 6:00 PM",
+    value: "Sun - Fri: 9:00 AM - 6:00 PM",
     href: null,
   },
 ];
@@ -119,16 +122,20 @@ export function ContactForm() {
           >
             {contactInfo.map((item, index) => (
               <motion.div key={item.title} variants={fadeInUp} custom={index}>
-                <Card 
+                <Card
                   className="border-border/50 bg-card/50 backdrop-blur-sm hover-elevate overflow-visible"
-                  data-testid={`contact-info-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  data-testid={`contact-info-${item.title
+                    .toLowerCase()
+                    .replace(/\s+/g, "-")}`}
                 >
                   <CardContent className="p-5 flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                       <item.icon className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-medium text-foreground mb-1">{item.title}</h3>
+                      <h3 className="font-medium text-foreground mb-1">
+                        {item.title}
+                      </h3>
                       {item.href ? (
                         <a
                           href={item.href}
@@ -137,7 +144,9 @@ export function ContactForm() {
                           {item.value}
                         </a>
                       ) : (
-                        <p className="text-sm text-muted-foreground">{item.value}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {item.value}
+                        </p>
                       )}
                     </div>
                   </CardContent>
@@ -149,14 +158,14 @@ export function ContactForm() {
               <Card className="border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden">
                 <div className="aspect-[4/3] w-full">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50470.0406920729!2d-122.44729!3d37.75769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1699900000000!5m2!1sen!2sus"
-                    className="w-full h-full border-0 grayscale opacity-80"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.109355836399!2d85.3146965748669!3d27.70895587616452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190b42d1a5fb%3A0x77f70b97f08f7f5!2sKathmandu!5e0!3m2!1sen!2snp!4v1700000000000!5m2!1sen!2snp"
+                    width="400"
+                    height="350"
+                    style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Office Location"
-                    data-testid="map-embed"
-                  />
+                  ></iframe>
                 </div>
               </Card>
             </motion.div>
@@ -184,15 +193,22 @@ export function ContactForm() {
                       Message Sent!
                     </h3>
                     <p className="text-muted-foreground mb-6">
-                      Thank you for reaching out. We'll get back to you within 24 hours.
+                      Thank you for reaching out. We'll get back to you within
+                      24 hours.
                     </p>
-                    <Button onClick={() => setIsSubmitted(false)} data-testid="button-send-another">
+                    <Button
+                      onClick={() => setIsSubmitted(false)}
+                      data-testid="button-send-another"
+                    >
                       Send Another Message
                     </Button>
                   </motion.div>
                 ) : (
                   <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <form
+                      onSubmit={form.handleSubmit(onSubmit)}
+                      className="space-y-6"
+                    >
                       <div className="grid sm:grid-cols-2 gap-4">
                         <FormField
                           control={form.control}
@@ -241,7 +257,7 @@ export function ContactForm() {
                               <FormControl>
                                 <Input
                                   type="tel"
-                                  placeholder="+1 (234) 567-890"
+                                  placeholder="+977-9800000000"
                                   {...field}
                                   data-testid="input-contact-phone"
                                 />

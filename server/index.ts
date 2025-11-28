@@ -86,13 +86,13 @@ app.use((req, res, next) => {
   // It is the only port that is not firewalled.
   const port = parseInt(process.env.PORT || "5000", 10);
   httpServer.listen(
-    {
-      port,
-      host: "0.0.0.0",
-      reusePort: true,
-    },
+    port,
+    "127.0.0.1",
     () => {
-      log(`serving on port ${port}`);
-    },
-  );
+      log(`Server is running on http://127.0.0.1:${port}`);
+    }
+  ).on('error', (err) => {
+    console.error('Failed to start server:', err);
+    process.exit(1);
+  });
 })();

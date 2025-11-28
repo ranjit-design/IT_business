@@ -30,7 +30,7 @@ export default function About() {
               variants={fadeInUp}
               className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider uppercase bg-primary/10 text-primary rounded-full mb-4"
             >
-              About Apex
+              About Ranjit
             </motion.span>
             <motion.h1
               variants={fadeInUp}
