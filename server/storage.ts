@@ -180,7 +180,7 @@ const projects: Project[] = [
 const testimonials: Testimonial[] = [
   {
     id: "1",
-    name: "Ranjit",
+    name: "Queen",
     role: "CEO",
     company: "TechVentures Inc",
     content: "Ranjit Agency transformed our digital presence completely. Their strategic approach and attention to detail exceeded our expectations. The results speak for themselves - our conversions increased by 150% within three months.",
@@ -228,7 +228,7 @@ const testimonials: Testimonial[] = [
 const teamMembers: TeamMember[] = [
   {
     id: "1",
-    name: "Ranjit",
+    name: "Queen",
     role: "CEO & Founder",
     bio: "With 15+ years in digital strategy, Alexandra leads Ranjit with a vision for innovative, client-focused solutions that drive measurable results.",
     avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
