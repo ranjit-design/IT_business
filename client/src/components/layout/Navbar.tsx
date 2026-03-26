@@ -65,7 +65,7 @@ export function Navbar() {
                 data-testid="link-logo"
               >
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center">
-                  <span className="text-white font-bold text-lg md:text-xl">A</span>
+                  <span className="text-black font-bold text-lg md:text-xl">A</span>
                 </div>
                 <span className="text-xl md:text-2xl font-bold text-foreground">
                   Ranjit

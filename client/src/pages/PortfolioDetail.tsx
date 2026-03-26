@@ -105,14 +105,14 @@ export default function PortfolioDetail() {
       animate="animate"
       exit="exit"
     >
-      <section className="pt-32 pb-16 relative overflow-hidden">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-48 sm:w-64 h-48 sm:h-64 bg-primary/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-48 sm:w-64 h-48 sm:h-64 bg-purple-500/20 rounded-full blur-3xl" />
 
-        <Container size="lg" className="relative z-10">
+        <Container size="lg" className="relative z-10 px-4 sm:px-6">
           <motion.div variants={staggerContainer} initial="hidden" animate="visible">
-            <motion.div variants={fadeInUp} className="mb-6">
+            <motion.div variants={fadeInUp} className="mb-4 sm:mb-6">
               <Link href="/portfolio">
                 <span className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
                   <ArrowLeft className="w-4 h-4" />
@@ -121,23 +121,23 @@ export default function PortfolioDetail() {
               </Link>
             </motion.div>
 
-            <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-3 mb-4">
+            <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4">
               <Badge variant="secondary">{project.category}</Badge>
               <span className="text-sm text-muted-foreground">{project.year}</span>
-              <span className="text-sm text-muted-foreground">•</span>
-              <span className="text-sm text-muted-foreground">{project.client}</span>
+              <span className="text-sm text-muted-foreground hidden sm:inline">•</span>
+              <span className="text-sm text-muted-foreground w-full sm:w-auto">{project.client}</span>
             </motion.div>
 
             <motion.h1
               variants={fadeInUp}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 leading-tight"
             >
               {project.title}
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
-              className="text-lg text-muted-foreground leading-relaxed max-w-3xl"
+              className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl"
             >
               {project.description}
             </motion.p>
@@ -145,14 +145,14 @@ export default function PortfolioDetail() {
         </Container>
       </section>
 
-      <section className="pb-16">
-        <Container size="lg">
+      <section className="pb-12 sm:pb-16">
+        <Container size="lg" className="px-4 sm:px-6">
           <motion.div
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="rounded-2xl overflow-hidden"
+            className="rounded-xl sm:rounded-2xl overflow-hidden"
           >
             <img
               src={project.image}
@@ -164,14 +164,14 @@ export default function PortfolioDetail() {
       </section>
 
       <SectionWrapper>
-        <Container size="lg">
-          <div className="grid lg:grid-cols-3 gap-12">
+        <Container size="lg" className="px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             <motion.div
               variants={staggerContainer}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="lg:col-span-2 space-y-12"
+              className="lg:col-span-2 space-y-8 sm:space-y-12"
             >
               <motion.div variants={fadeInUp}>
                 <h2 className="text-2xl font-bold text-foreground mb-4">The Challenge</h2>
@@ -203,7 +203,7 @@ export default function PortfolioDetail() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="space-y-6"
+              className="space-y-4 sm:space-y-6"
             >
               <motion.div variants={fadeInUp}>
                 <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
@@ -255,9 +255,9 @@ export default function PortfolioDetail() {
         </Container>
       </SectionWrapper>
 
-      <section className="py-16 border-t border-border">
-        <Container size="lg">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+      <section className="py-12 sm:py-16 border-t border-border">
+        <Container size="lg" className="px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
             {prevProject ? (
               <Link href={`/portfolio/${prevProject.id}`}>
                 <motion.div

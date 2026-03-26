@@ -9,20 +9,22 @@ import type { TimelineEvent } from "@shared/schema";
 function TimelineEventSkeleton({ isEven }: { isEven: boolean }) {
   return (
     <div
-      className={`relative md:flex items-center ${
+      className={`relative flex md:items-center ${
         isEven ? "md:flex-row" : "md:flex-row-reverse"
       }`}
     >
-      <div className={`md:w-1/2 ${isEven ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
-        <div className="p-6 rounded-xl bg-card border border-border/50">
-          <Skeleton className="h-6 w-16 mb-3" />
-          <Skeleton className="h-6 w-48 mb-2" />
-          <Skeleton className="h-4 w-full mb-1" />
-          <Skeleton className="h-4 w-4/5" />
+      <div className={`md:w-1/2 pl-10 sm:pl-12 md:pl-0 ${isEven ? "md:pr-8 lg:pr-12 md:text-right" : "md:pl-8 lg:pl-12"}`}>
+        <div className="p-4 sm:p-6 rounded-xl bg-card border border-border/50">
+          <Skeleton className="h-5 sm:h-6 w-16 mb-3" />
+          <Skeleton className="h-5 sm:h-6 w-40 sm:w-48 mb-2" />
+          <Skeleton className="h-3 sm:h-4 w-full mb-1" />
+          <Skeleton className="h-3 sm:h-4 w-4/5" />
         </div>
       </div>
-      <div className="hidden md:block w-4 h-4 rounded-full bg-muted absolute left-1/2 -translate-x-1/2" />
-      <div className="md:w-1/2" />
+      <div className="absolute left-4 sm:left-1/2 sm:-translate-x-1/2 flex items-center justify-center">
+        <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-muted" />
+      </div>
+      <div className="hidden md:block md:w-1/2" />
     </div>
   );
 }
@@ -34,7 +36,7 @@ export function TimelineSection() {
 
   return (
     <SectionWrapper>
-      <Container size="lg">
+      <Container size="lg" className="px-4 sm:px-6">
         <SectionHeader
           badge="Our Journey"
           title="A Decade of Excellence"
@@ -48,9 +50,9 @@ export function TimelineSection() {
         )}
 
         <div className="relative max-w-4xl mx-auto">
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-primary to-primary/50 hidden md:block" />
+          <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-primary to-primary/50 md:block" />
 
-          <div className="space-y-8 md:space-y-0">
+          <div className="space-y-6 sm:space-y-8 md:space-y-0">
             {isLoading
               ? Array.from({ length: 6 }).map((_, index) => (
                   <motion.div key={index} variants={fadeInUp}>
@@ -61,24 +63,24 @@ export function TimelineSection() {
                   <motion.div
                     key={event.id}
                     variants={fadeInUp}
-                    className={`relative md:flex items-center ${
+                    className={`relative flex md:items-center ${
                       index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                     }`}
                     data-testid={`timeline-event-${event.id}`}
                   >
                     <div
-                      className={`md:w-1/2 ${
-                        index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"
+                      className={`md:w-1/2 pl-10 sm:pl-12 md:pl-0 ${
+                        index % 2 === 0 ? "md:pr-8 lg:pr-12 md:text-right" : "md:pl-8 lg:pl-12"
                       }`}
                     >
                       <motion.div
                         variants={timelineVariants}
-                        className="p-6 rounded-xl bg-card border border-border/50 hover-elevate"
+                        className="p-4 sm:p-6 rounded-xl bg-card border border-border/50 hover-elevate"
                       >
                         <span className="inline-block px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full mb-3">
                           {event.year}
                         </span>
-                        <h3 className="text-xl font-semibold text-foreground mb-2">
+                        <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">
                           {event.title}
                         </h3>
                         <p className="text-sm text-muted-foreground leading-relaxed">
@@ -89,12 +91,12 @@ export function TimelineSection() {
 
                     <motion.div
                       variants={timelineVariants}
-                      className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center justify-center"
+                      className="absolute left-4 sm:left-1/2 sm:-translate-x-1/2 flex items-center justify-center"
                     >
-                      <div className="w-4 h-4 rounded-full bg-primary ring-4 ring-background" />
+                      <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-primary ring-2 sm:ring-4 ring-background" />
                     </motion.div>
 
-                    <div className="md:w-1/2" />
+                    <div className="hidden md:block md:w-1/2" />
                   </motion.div>
                 ))}
           </div>

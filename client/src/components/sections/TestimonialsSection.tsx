@@ -14,19 +14,19 @@ import type { Testimonial } from "@shared/schema";
 function TestimonialSkeleton() {
   return (
     <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-      <CardContent className="p-8 md:p-12">
-        <div className="text-center min-h-[280px] md:min-h-[240px] flex flex-col items-center justify-center">
-          <div className="flex justify-center gap-1 mb-6">
+      <CardContent className="p-6 sm:p-8 md:p-12">
+        <div className="text-center min-h-[240px] sm:min-h-[280px] md:min-h-[240px] flex flex-col items-center justify-center">
+          <div className="flex justify-center gap-1 mb-4 sm:mb-6">
             {[...Array(5)].map((_, i) => (
-              <Skeleton key={i} className="w-5 h-5 rounded" />
+              <Skeleton key={i} className="w-4 h-4 sm:w-5 sm:h-5 rounded" />
             ))}
           </div>
-          <Skeleton className="h-6 w-full max-w-lg mb-2" />
-          <Skeleton className="h-6 w-4/5 mb-2" />
-          <Skeleton className="h-6 w-3/5 mb-8" />
-          <Skeleton className="w-16 h-16 rounded-full mb-4" />
-          <Skeleton className="h-5 w-32 mb-2" />
-          <Skeleton className="h-4 w-40" />
+          <Skeleton className="h-5 sm:h-6 w-full max-w-lg mb-2" />
+          <Skeleton className="h-5 sm:h-6 w-4/5 mb-2" />
+          <Skeleton className="h-5 sm:h-6 w-3/5 mb-6 sm:mb-8" />
+          <Skeleton className="w-14 h-14 sm:w-16 sm:h-16 rounded-full mb-4" />
+          <Skeleton className="h-4 sm:h-5 w-28 sm:w-32 mb-2" />
+          <Skeleton className="h-3 sm:h-4 w-32 sm:w-40" />
         </div>
       </CardContent>
     </Card>
@@ -80,7 +80,7 @@ export function TestimonialsSection() {
 
   return (
     <SectionWrapper gradient>
-      <Container size="lg">
+      <Container size="lg" className="px-4 sm:px-6">
         <SectionHeader
           badge="Testimonials"
           title="What Our Clients Say"
@@ -98,10 +98,10 @@ export function TestimonialsSection() {
             <TestimonialSkeleton />
           ) : testimonials && testimonials.length > 0 ? (
             <Card className="border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden">
-              <CardContent className="p-8 md:p-12 relative">
-                <Quote className="absolute top-8 left-8 w-12 h-12 text-primary/10" />
+              <CardContent className="p-6 sm:p-8 md:p-12 relative">
+                <Quote className="absolute top-4 left-4 sm:top-8 sm:left-8 w-8 h-8 sm:w-12 sm:h-12 text-primary/10" />
 
-                <div className="relative min-h-[280px] md:min-h-[240px] flex items-center">
+                <div className="relative min-h-[240px] sm:min-h-[280px] md:min-h-[240px] flex items-center">
                   <AnimatePresence initial={false} custom={direction} mode="wait">
                     <motion.div
                       key={currentIndex}
@@ -116,17 +116,17 @@ export function TestimonialsSection() {
                       }}
                       className="w-full"
                     >
-                      <div className="text-center">
-                        <div className="flex justify-center gap-1 mb-6">
+                      <div className="text-center px-2">
+                        <div className="flex justify-center gap-1 mb-4 sm:mb-6">
                           {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                            <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                            <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400" />
                           ))}
                         </div>
-                        <p className="text-lg md:text-xl text-foreground leading-relaxed mb-8 italic">
+                        <p className="text-base sm:text-lg md:text-xl text-foreground leading-relaxed mb-6 sm:mb-8 italic">
                           "{testimonials[currentIndex].content}"
                         </p>
                         <div className="flex flex-col items-center">
-                          <Avatar className="w-16 h-16 mb-4 ring-2 ring-primary/20 ring-offset-2 ring-offset-background">
+                          <Avatar className="w-14 h-14 sm:w-16 sm:h-16 mb-3 sm:mb-4 ring-2 ring-primary/20 ring-offset-2 ring-offset-background">
                             <AvatarImage
                               src={testimonials[currentIndex].avatar}
                               alt={testimonials[currentIndex].name}
@@ -135,10 +135,10 @@ export function TestimonialsSection() {
                               {testimonials[currentIndex].name.charAt(0)}
                             </AvatarFallback>
                           </Avatar>
-                          <h4 className="text-lg font-semibold text-foreground">
+                          <h4 className="text-base sm:text-lg font-semibold text-foreground">
                             {testimonials[currentIndex].name}
                           </h4>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-xs sm:text-sm text-muted-foreground">
                             {testimonials[currentIndex].role} at {testimonials[currentIndex].company}
                           </p>
                         </div>
@@ -147,15 +147,15 @@ export function TestimonialsSection() {
                   </AnimatePresence>
                 </div>
 
-                <div className="flex items-center justify-center gap-4 mt-8">
+                <div className="flex items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
                   <Button
                     variant="outline"
                     size="icon"
                     onClick={handlePrevious}
-                    className="rounded-full"
+                    className="rounded-full w-9 h-9 sm:w-10 sm:h-10"
                     data-testid="button-testimonial-prev"
                   >
-                    <ChevronLeft className="w-5 h-5" />
+                    <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
                   </Button>
                   <div className="flex gap-2">
                     {testimonials.map((_, index) => (
@@ -165,10 +165,10 @@ export function TestimonialsSection() {
                           setDirection(index > currentIndex ? 1 : -1);
                           setCurrentIndex(index);
                         }}
-                        className={`w-2 h-2 rounded-full transition-all ${
+                        className={`h-2 rounded-full transition-all ${
                           index === currentIndex
-                            ? "w-6 bg-primary"
-                            : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                            ? "w-4 sm:w-6 bg-primary"
+                            : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50"
                         }`}
                         data-testid={`button-testimonial-dot-${index}`}
                       />
@@ -178,10 +178,10 @@ export function TestimonialsSection() {
                     variant="outline"
                     size="icon"
                     onClick={handleNext}
-                    className="rounded-full"
+                    className="rounded-full w-9 h-9 sm:w-10 sm:h-10"
                     data-testid="button-testimonial-next"
                   >
-                    <ChevronRight className="w-5 h-5" />
+                    <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
                   </Button>
                 </div>
               </CardContent>

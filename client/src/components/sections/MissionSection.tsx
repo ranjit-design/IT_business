@@ -29,29 +29,29 @@ const values = [
 export function MissionSection() {
   return (
     <SectionWrapper gradient>
-      <Container size="lg">
+      <Container size="lg" className="px-4 sm:px-6">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
         >
           <motion.span
             variants={fadeInUp}
-            className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider uppercase bg-primary/10 text-primary rounded-full mb-4"
+            className="inline-block px-3 sm:px-4 py-1.5 text-xs font-semibold tracking-wider uppercase bg-primary/10 text-primary rounded-full mb-4"
           >
             About Us
           </motion.span>
           <motion.h2
             variants={fadeInUp}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight max-w-3xl mx-auto"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 leading-tight max-w-3xl mx-auto"
           >
             Transforming Ideas Into Digital Reality
           </motion.h2>
           <motion.p
             variants={fadeInUp}
-            className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto"
+            className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl mx-auto px-2 sm:px-0"
           >
             Since 2015, we've been at the forefront of digital innovation, helping 
             businesses of all sizes navigate the digital landscape and achieve their goals.
@@ -63,7 +63,7 @@ export function MissionSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
         >
           {values.map((value, index) => (
             <motion.div key={value.title} variants={fadeInUp} custom={index}>
@@ -73,14 +73,14 @@ export function MissionSection() {
                   data-testid={`card-value-${value.title.toLowerCase().replace(/\s+/g, '-')}`}
                 >
                   <motion.div variants={cardHover} className="h-full">
-                    <CardContent className="p-8 h-full flex flex-col">
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-purple-500/10 flex items-center justify-center mx-auto mb-6">
-                        <value.icon className="w-8 h-8 text-primary" />
+                    <CardContent className="p-6 sm:p-8 h-full flex flex-col">
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-purple-500/10 flex items-center justify-center mx-auto mb-5 sm:mb-6">
+                        <value.icon className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
                       </div>
-                      <h3 className="text-xl font-semibold text-foreground mb-4">
+                      <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">
                         {value.title}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                         {value.description}
                       </p>
                     </CardContent>

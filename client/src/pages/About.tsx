@@ -14,12 +14,12 @@ export default function About() {
       animate="animate"
       exit="exit"
     >
-      <section className="pt-32 pb-16 relative overflow-hidden">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-48 sm:w-64 h-48 sm:h-64 bg-primary/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-48 sm:w-64 h-48 sm:h-64 bg-purple-500/20 rounded-full blur-3xl" />
         
-        <Container size="lg" className="relative z-10">
+        <Container size="lg" className="relative z-10 px-4 sm:px-6">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -28,20 +28,20 @@ export default function About() {
           >
             <motion.span
               variants={fadeInUp}
-              className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider uppercase bg-primary/10 text-primary rounded-full mb-4"
+              className="inline-block px-3 sm:px-4 py-1.5 text-xs font-semibold tracking-wider uppercase bg-primary/10 text-primary rounded-full mb-4"
             >
               About Ranjit
             </motion.span>
             <motion.h1
               variants={fadeInUp}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 leading-tight"
             >
               Building the Future of{" "}
               <span className="text-gradient">Digital Excellence</span>
             </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="text-lg text-muted-foreground leading-relaxed"
+              className="text-base sm:text-lg text-muted-foreground leading-relaxed px-2 sm:px-0"
             >
               We're a team of passionate creators, strategists, and technologists 
               dedicated to transforming businesses through exceptional digital experiences.

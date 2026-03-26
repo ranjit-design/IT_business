@@ -130,7 +130,7 @@ const projects: Project[] = [
     description: "HIPAA-compliant telemedicine platform connecting patients with healthcare providers through secure video consultations.",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
     client: "HealthFirst Network",
-    year: "2023",
+    year: "2026",
     technologies: ["React Native", "WebRTC", "AWS", "Node.js", "MongoDB"],
     challenge: "Develop a secure, reliable video consultation platform that works across various network conditions.",
     solution: "Built adaptive video streaming with automatic quality adjustment and end-to-end encryption for all communications.",
@@ -143,7 +143,7 @@ const projects: Project[] = [
     description: "Enterprise project management platform with advanced collaboration features, resource planning, and AI-powered productivity insights.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
     client: "Productivity Labs",
-    year: "2023",
+    year: "2026",
     technologies: ["Vue.js", "Python", "FastAPI", "Redis", "Elasticsearch"],
     challenge: "Create a scalable project management solution that handles enterprise-level workloads with real-time collaboration.",
     solution: "Implemented event-driven architecture with CQRS pattern, enabling real-time updates across thousands of concurrent users.",
@@ -156,7 +156,7 @@ const projects: Project[] = [
     description: "Complete brand transformation for a tech startup, including visual identity, messaging framework, and go-to-market strategy.",
     image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&h=600&fit=crop",
     client: "Nexus Technologies",
-    year: "2025",
+    year: "2026",
     technologies: ["Figma", "Adobe CC", "Brand Strategy", "Market Research"],
     challenge: "Reposition a B2B tech company as an innovative leader in their industry while maintaining existing client relationships.",
     solution: "Developed a sophisticated brand identity with a bold color palette, modern typography, and compelling brand narrative.",
@@ -169,7 +169,7 @@ const projects: Project[] = [
     description: "Machine learning platform that automates customer support with natural language processing and sentiment analysis.",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
     client: "SupportTech Inc",
-    year: "2025",
+    year: "2026",
     technologies: ["Python", "TensorFlow", "OpenAI", "FastAPI", "PostgreSQL"],
     challenge: "Build an AI system that can handle complex customer queries while maintaining high accuracy and human-like responses.",
     solution: "Developed a hybrid AI system combining fine-tuned LLMs with retrieval-augmented generation for accurate, contextual responses.",
@@ -180,7 +180,7 @@ const projects: Project[] = [
 const testimonials: Testimonial[] = [
   {
     id: "1",
-    name: "Sarah Mitchell",
+    name: "Ranjit",
     role: "CEO",
     company: "TechVentures Inc",
     content: "Ranjit Agency transformed our digital presence completely. Their strategic approach and attention to detail exceeded our expectations. The results speak for themselves - our conversions increased by 150% within three months.",
@@ -189,7 +189,7 @@ const testimonials: Testimonial[] = [
   },
   {
     id: "2",
-    name: "Michael Chen",
+    name: "XYZ",
     role: "CTO",
     company: "InnovateTech",
     content: "Working with Ranjit was a game-changer for our startup. They delivered a scalable platform that handles our growing user base effortlessly. Their technical expertise and communication are truly world-class.",
@@ -198,7 +198,7 @@ const testimonials: Testimonial[] = [
   },
   {
     id: "3",
-    name: "Emily Rodriguez",
+    name: "ABC",
     role: "Marketing Director",
     company: "Global Brands Co",
     content: "The brand strategy they developed for us was nothing short of brilliant. They understood our vision and translated it into a compelling identity that resonates with our audience. Highly recommended!",
@@ -207,7 +207,7 @@ const testimonials: Testimonial[] = [
   },
   {
     id: "4",
-    name: "David Park",
+    name: "Hero",
     role: "Founder",
     company: "NextGen Solutions",
     content: "From concept to launch, Ranjit handled everything professionally. Their team's creativity and technical skills are matched only by their dedication to client success. They're now our go-to digital partner.",
@@ -216,7 +216,7 @@ const testimonials: Testimonial[] = [
   },
   {
     id: "5",
-    name: "Lisa Thompson",
+    name: "Villain",
     role: "VP of Product",
     company: "HealthFirst",
     content: "Ranjit delivered our healthcare platform on time and within budget. Their understanding of compliance requirements and user experience made them the perfect partner for our mission-critical project.",
@@ -228,7 +228,7 @@ const testimonials: Testimonial[] = [
 const teamMembers: TeamMember[] = [
   {
     id: "1",
-    name: "Alexandra Sterling",
+    name: "Ranjit",
     role: "CEO & Founder",
     bio: "With 15+ years in digital strategy, Alexandra leads Ranjit with a vision for innovative, client-focused solutions that drive measurable results.",
     avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
@@ -236,41 +236,41 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: "2",
-    name: "Marcus Wei",
+    name: "Tiger",
     role: "Technical Director",
-    bio: "A full-stack architect with expertise in scalable systems, Marcus ensures every project is built on a foundation of technical excellence.",
+    bio: "A full-stack architect with expertise in scalable systems, Tiger ensures every project is built on a foundation of technical excellence.",
     avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
     social: { linkedin: "#", github: "#" }
   },
   {
     id: "3",
-    name: "Olivia Martinez",
+    name: "Lion",
     role: "Creative Director",
-    bio: "Olivia's award-winning designs have shaped brands across industries. She brings artistry and strategy to every creative challenge.",
+    bio: "Lion's award-winning designs have shaped brands across industries. He brings artistry and strategy to every creative challenge.",
     avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop&crop=face",
     social: { linkedin: "#", twitter: "#" }
   },
   {
     id: "4",
-    name: "James Cooper",
+    name: "SuperMan",
     role: "Head of Strategy",
-    bio: "James combines data-driven insights with creative thinking to develop strategies that position our clients for sustainable growth.",
+    bio: "SuperMan combines data-driven insights with creative thinking to develop strategies that position our clients for sustainable growth.",
     avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face",
     social: { linkedin: "#", twitter: "#" }
   },
   {
     id: "5",
-    name: "Sophie Chen",
+    name: "Batman",
     role: "UX Lead",
-    bio: "Sophie crafts user experiences that delight and convert. Her human-centered approach ensures every interaction is intuitive and meaningful.",
+    bio: "Batman crafts user experiences that delight and convert. His human-centered approach ensures every interaction is intuitive and meaningful.",
     avatar: "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=400&h=400&fit=crop&crop=face",
     social: { linkedin: "#" }
   },
   {
     id: "6",
-    name: "Ryan Brooks",
+    name: "IronMan",
     role: "Development Lead",
-    bio: "Ryan leads our development team with a focus on clean code and cutting-edge technologies. He turns complex requirements into elegant solutions.",
+    bio: "IronMan leads our development team with a focus on clean code and cutting-edge technologies. He turns complex requirements into elegant solutions.",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
     social: { linkedin: "#", github: "#" }
   }
@@ -303,13 +303,13 @@ const timeline: TimelineEvent[] = [
   },
   {
     id: "5",
-    year: "2023",
+    year: "2026",
     title: "Industry Recognition",
     description: "Won multiple Webby Awards and ranked among the top 10 digital agencies globally."
   },
   {
     id: "6",
-    year: "2025",
+    year: "2026",
     title: "AI & Innovation Lab",
     description: "Launched our AI Innovation Lab, pioneering next-generation solutions for our clients."
   }
@@ -345,6 +345,7 @@ export class MemStorage implements IStorage {
     const id = randomUUID();
     const submission: ContactSubmission = {
       ...data,
+      phone: data.phone ?? null,
       id,
       createdAt: new Date(),
     };

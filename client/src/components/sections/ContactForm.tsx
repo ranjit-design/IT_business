@@ -112,13 +112,13 @@ export function ContactForm() {
           description="Have a project in mind or just want to say hello? We'd love to hear from you."
         />
 
-        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="lg:col-span-2 space-y-4"
+            className="lg:col-span-2 space-y-3 sm:space-y-4"
           >
             {contactInfo.map((item, index) => (
               <motion.div key={item.title} variants={fadeInUp} custom={index}>
@@ -159,8 +159,7 @@ export function ContactForm() {
                 <div className="aspect-[4/3] w-full">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.109355836399!2d85.3146965748669!3d27.70895587616452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190b42d1a5fb%3A0x77f70b97f08f7f5!2sKathmandu!5e0!3m2!1sen!2snp!4v1700000000000!5m2!1sen!2snp"
-                    width="400"
-                    height="350"
+                    className="w-full h-full"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
@@ -179,7 +178,7 @@ export function ContactForm() {
             className="lg:col-span-3"
           >
             <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-              <CardContent className="p-6 md:p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 {isSubmitted ? (
                   <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
@@ -207,9 +206,9 @@ export function ContactForm() {
                   <Form {...form}>
                     <form
                       onSubmit={form.handleSubmit(onSubmit)}
-                      className="space-y-6"
+                      className="space-y-4 sm:space-y-6"
                     >
-                      <div className="grid sm:grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                         <FormField
                           control={form.control}
                           name="name"
@@ -247,7 +246,7 @@ export function ContactForm() {
                         />
                       </div>
 
-                      <div className="grid sm:grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                         <FormField
                           control={form.control}
                           name="phone"
@@ -294,7 +293,7 @@ export function ContactForm() {
                             <FormControl>
                               <Textarea
                                 placeholder="Tell us about your project..."
-                                rows={6}
+                                rows={5}
                                 {...field}
                                 data-testid="input-contact-message"
                               />
@@ -307,7 +306,7 @@ export function ContactForm() {
                       <Button
                         type="submit"
                         size="lg"
-                        className="w-full gap-2"
+                        className="w-full gap-2 mt-2"
                         disabled={mutation.isPending}
                         data-testid="button-contact-submit"
                       >

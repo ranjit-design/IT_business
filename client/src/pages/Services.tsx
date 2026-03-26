@@ -22,10 +22,10 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 
 function ServiceDetailSkeleton({ isEven }: { isEven: boolean }) {
   return (
-    <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
       <div className={isEven ? "lg:order-1" : "lg:order-2"}>
         <Skeleton className="w-16 h-16 rounded-2xl mb-6" />
-        <Skeleton className="h-10 w-3/4 mb-4" />
+        <Skeleton className="h-8 sm:h-10 w-3/4 mb-4" />
         <Skeleton className="h-4 w-full mb-2" />
         <Skeleton className="h-4 w-5/6 mb-6" />
         <div className="space-y-3 mb-8">
@@ -36,11 +36,11 @@ function ServiceDetailSkeleton({ isEven }: { isEven: boolean }) {
             </div>
           ))}
         </div>
-        <Skeleton className="h-11 w-36" />
+        <Skeleton className="h-11 w-full sm:w-36" />
       </div>
       <div className={isEven ? "lg:order-2" : "lg:order-1"}>
         <Card className="border-border/50 bg-card/50">
-          <CardContent className="p-8">
+          <CardContent className="p-4 sm:p-6 md:p-8">
             <Skeleton className="aspect-[4/3] w-full rounded-lg" />
           </CardContent>
         </Card>
@@ -61,12 +61,12 @@ export default function Services() {
       animate="animate"
       exit="exit"
     >
-      <section className="pt-32 pb-16 relative overflow-hidden">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-48 sm:w-64 h-48 sm:h-64 bg-primary/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-48 sm:w-64 h-48 sm:h-64 bg-purple-500/20 rounded-full blur-3xl" />
 
-        <Container size="lg" className="relative z-10">
+        <Container size="lg" className="relative z-10 px-4 sm:px-6">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -75,20 +75,20 @@ export default function Services() {
           >
             <motion.span
               variants={fadeInUp}
-              className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider uppercase bg-primary/10 text-primary rounded-full mb-4"
+              className="inline-block px-3 sm:px-4 py-1.5 text-xs font-semibold tracking-wider uppercase bg-primary/10 text-primary rounded-full mb-4"
             >
               Our Services
             </motion.span>
             <motion.h1
               variants={fadeInUp}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 leading-tight"
             >
               Comprehensive{" "}
               <span className="text-gradient">Digital Solutions</span>
             </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="text-lg text-muted-foreground leading-relaxed"
+              className="text-base sm:text-lg text-muted-foreground leading-relaxed px-2 sm:px-0"
             >
               From strategy to execution, we offer a full spectrum of digital services
               designed to help your business thrive in the modern landscape.
@@ -105,7 +105,7 @@ export default function Services() {
             </motion.div>
           )}
 
-          <div className="space-y-24">
+          <div className="space-y-16 sm:space-y-20 md:space-y-24">
             {isLoading
               ? Array.from({ length: 6 }).map((_, index) => (
                   <motion.div
@@ -130,9 +130,7 @@ export default function Services() {
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, margin: "-100px" }}
-                      className={`grid lg:grid-cols-2 gap-12 items-center ${
-                        !isEven ? "lg:flex-row-reverse" : ""
-                      }`}
+                      className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center"
                       data-testid={`service-detail-${service.id}`}
                     >
                       <motion.div
@@ -142,7 +140,7 @@ export default function Services() {
                         <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-purple-500/10 flex items-center justify-center mb-6">
                           <IconComponent className="w-8 h-8 text-primary" />
                         </div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
                           {service.title}
                         </h2>
                         <p className="text-muted-foreground leading-relaxed mb-6">
@@ -161,7 +159,7 @@ export default function Services() {
                         <Link href="/contact">
                           <Button
                             size="lg"
-                            className="gap-2 group"
+                            className="gap-2 group w-full sm:w-auto"
                             data-testid={`button-service-contact-${service.id}`}
                           >
                             Get Started
@@ -177,9 +175,9 @@ export default function Services() {
                         <motion.div initial="rest" whileHover="hover" animate="rest">
                           <Card className="border-border/50 bg-card/50 backdrop-blur-sm overflow-visible">
                             <motion.div variants={cardHover}>
-                              <CardContent className="p-8">
+                              <CardContent className="p-4 sm:p-6 md:p-8">
                                 <div className="aspect-[4/3] rounded-lg bg-gradient-to-br from-primary/5 to-purple-500/5 border border-border/50 flex items-center justify-center">
-                                  <IconComponent className="w-24 h-24 text-primary/20" />
+                                  <IconComponent className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 text-primary/20" />
                                 </div>
                               </CardContent>
                             </motion.div>

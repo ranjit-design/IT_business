@@ -18,7 +18,7 @@ export function SectionWrapper({ children, className, id, gradient = false }: Se
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
       className={cn(
-        "py-16 md:py-24 lg:py-32 relative overflow-hidden",
+        "py-12 sm:py-16 md:py-24 lg:py-32 relative overflow-hidden",
         gradient && "section-gradient",
         className
       )}
@@ -47,21 +47,21 @@ export function SectionHeader({
     <motion.div
       variants={fadeInUp}
       className={cn(
-        "mb-12 md:mb-16",
+        "mb-8 sm:mb-10 md:mb-12 lg:mb-16",
         centered && "text-center max-w-3xl mx-auto",
         className
       )}
     >
       {badge && (
-        <span className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider uppercase bg-primary/10 text-primary rounded-full mb-4">
+        <span className="inline-block px-3 sm:px-4 py-1.5 text-xs font-semibold tracking-wider uppercase bg-primary/10 text-primary rounded-full mb-4">
           {badge}
         </span>
       )}
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
         {title}
       </h2>
       {description && (
-        <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+        <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed px-2 sm:px-0">
           {description}
         </p>
       )}

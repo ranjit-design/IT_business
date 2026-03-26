@@ -7,11 +7,11 @@ import { fadeInUp, staggerContainer, floatingAnimation, glowAnimation } from "@/
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-24">
       <div className="absolute inset-0 bg-gradient-hero" />
       
-      <div className="absolute top-1/4 left-1/4 w-64 md:w-96 h-64 md:h-96 bg-primary/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-64 md:w-96 h-64 md:h-96 bg-purple-500/20 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 left-1/4 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-primary/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-purple-500/20 rounded-full blur-3xl" />
       
       <motion.div
         className="absolute top-20 right-20 w-20 h-20 border border-primary/20 rounded-2xl hidden lg:block"
@@ -29,15 +29,15 @@ export function Hero() {
         style={{ animationDelay: "4s" }}
       />
 
-      <Container size="lg" className="relative z-10">
+      <Container size="lg" className="relative z-10 px-4 sm:px-6">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
           className="text-center max-w-5xl mx-auto"
         >
-          <motion.div variants={fadeInUp} className="mb-6">
-            <span className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-primary/10 text-primary rounded-full border border-primary/20">
+          <motion.div variants={fadeInUp} className="mb-4 sm:mb-6">
+            <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium bg-primary/10 text-primary rounded-full border border-primary/20">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
@@ -57,7 +57,7 @@ export function Hero() {
 
           <motion.p
             variants={fadeInUp}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0"
           >
             A premium digital agency crafting exceptional websites, applications, 
             and brand experiences for forward-thinking businesses.
@@ -65,10 +65,10 @@ export function Hero() {
 
           <motion.div
             variants={fadeInUp}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
           >
             <Link href="/contact">
-              <Button size="lg" className="min-w-[180px] gap-2 group" data-testid="button-hero-start">
+              <Button size="lg" className="min-w-[160px] sm:min-w-[180px] gap-2 group w-full sm:w-auto" data-testid="button-hero-start">
                 Start Your Project
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Button>
@@ -77,7 +77,7 @@ export function Hero() {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="min-w-[180px] gap-2"
+                className="min-w-[160px] sm:min-w-[180px] gap-2 w-full sm:w-auto"
                 data-testid="button-hero-portfolio"
               >
                 <Play className="w-4 h-4" />
@@ -88,10 +88,10 @@ export function Hero() {
 
           <motion.div
             variants={fadeInUp}
-            className="mt-16 md:mt-24"
+            className="mt-12 sm:mt-16 md:mt-24"
           >
-            <p className="text-sm text-muted-foreground mb-6">Trusted by industry leaders</p>
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-60">
+            <p className="text-xs sm:text-sm text-muted-foreground mb-4 sm:mb-6">Trusted by industry leaders</p>
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 md:gap-12 opacity-60 px-2">
               {["TechCorp", "InnovateLabs", "FutureBrand", "GlobalTech", "NextGen"].map((company) => (
                 <motion.span
                   key={company}

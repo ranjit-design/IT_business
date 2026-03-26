@@ -40,8 +40,8 @@ const features = [
 export function WhyChooseUs() {
   return (
     <SectionWrapper>
-      <Container size="lg">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <Container size="lg" className="px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -50,19 +50,19 @@ export function WhyChooseUs() {
           >
             <motion.span
               variants={fadeInUp}
-              className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider uppercase bg-primary/10 text-primary rounded-full mb-4"
+              className="inline-block px-3 sm:px-4 py-1.5 text-xs font-semibold tracking-wider uppercase bg-primary/10 text-primary rounded-full mb-4"
             >
               Why Choose Us
             </motion.span>
             <motion.h2
               variants={fadeInUp}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 leading-tight"
             >
               We're Different. Here's Why.
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="text-muted-foreground leading-relaxed mb-8"
+              className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-6 sm:mb-8"
             >
               We combine creativity with technology to deliver solutions that not only look 
               stunning but also drive real business results. Our approach is collaborative, 
@@ -71,19 +71,19 @@ export function WhyChooseUs() {
             
             <motion.div
               variants={fadeInUp}
-              className="flex flex-wrap gap-6"
+              className="flex flex-wrap gap-4 sm:gap-6"
             >
               <div className="text-center">
-                <div className="text-4xl font-bold text-gradient mb-1">150+</div>
-                <div className="text-sm text-muted-foreground">Projects Delivered</div>
+                <div className="text-3xl sm:text-4xl font-bold text-gradient mb-1">150+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Projects Delivered</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-gradient mb-1">50+</div>
-                <div className="text-sm text-muted-foreground">Team Members</div>
+                <div className="text-3xl sm:text-4xl font-bold text-gradient mb-1">50+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Team Members</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-gradient mb-1">98%</div>
-                <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+                <div className="text-3xl sm:text-4xl font-bold text-gradient mb-1">98%</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Client Satisfaction</div>
               </div>
             </motion.div>
           </motion.div>
@@ -93,21 +93,21 @@ export function WhyChooseUs() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4"
           >
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
                 variants={fadeInUp}
                 custom={index}
-                className="p-5 rounded-xl bg-card border border-border/50 hover-elevate"
+                className="p-4 sm:p-5 rounded-xl bg-card border border-border/50 hover-elevate"
                 data-testid={`feature-${feature.title.toLowerCase().replace(/\s+/g, '-')}`}
               >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
-                  <feature.icon className="w-5 h-5 text-primary" />
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-2 sm:mb-3">
+                  <feature.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-1">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
+                <h3 className="font-semibold text-foreground text-sm sm:text-base mb-1">{feature.title}</h3>
+                <p className="text-xs sm:text-sm text-muted-foreground">{feature.description}</p>
               </motion.div>
             ))}
           </motion.div>
