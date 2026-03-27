@@ -68,24 +68,6 @@ export function WhyChooseUs() {
               stunning but also drive real business results. Our approach is collaborative, 
               transparent, and focused on your success.
             </motion.p>
-            
-            <motion.div
-              variants={fadeInUp}
-              className="flex flex-wrap gap-4 sm:gap-6"
-            >
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-gradient mb-1">150+</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">Projects Delivered</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-gradient mb-1">50+</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">Team Members</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-gradient mb-1">98%</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">Client Satisfaction</div>
-              </div>
-            </motion.div>
           </motion.div>
 
           <motion.div
